@@ -10,5 +10,8 @@ import App from './apps/main/components/App';
 // };
 
 axios.get('https://bakesaleforgood.com/api/deals').then((resp) => {
-  ReactDOM.render(<App data={resp.data} />, document.getElementById('root'));
+  console.log('========1');
+  console.log('========= RESPONSE:', resp);
+  console.log('============2');
+  ReactDOM.render(<App data={{ deals: resp.data}} />, document.getElementById('root'));
 });
